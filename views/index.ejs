@@ -1,0 +1,17 @@
+<%- include("layout/header") %>
+   <main>
+      <form action="/" method="post">
+         <input type="text" placeholder="Enter Language" name="plName">
+         <button type="submit">Add Data</button>
+      </form>
+      <div class="container">
+          <%if(plNames.length > 0){%>
+            <%for(let i=0; i < plNames.length; i++){%>
+               <div class="lang"><p><%=plNames[i]%></p></div>
+            <%}%>
+          <%} else { %>
+            <p>No data available</p>
+          <%}%>
+      </div>
+   </main>
+   <%- include("layout/footer") %>
